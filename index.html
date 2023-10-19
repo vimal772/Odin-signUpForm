@@ -9,6 +9,9 @@
 <body>
     <main>
         <img src="./images/Leaf.jpg" alt="Leaf-img">
+        <div class="absolute">
+            <h1>Odin</h1>
+        </div>
         <section>
             <div class="content">
                 <p>This is not a real online service! You know you need something like this in your life to help you resize your deepest dreams.</p>
@@ -19,31 +22,46 @@
                 <h2>Let's Do This!</h2>
                 <form action="" method="post" class="sign-up">
                     <fieldset class="user-details">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" id="lastName">
+                        <div class="row">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" name="firstName" id="firstName" maxlength="10" minlength="3" required>
+                        </div>
+                        <div class="row">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" name="lastName" id="lastName" maxlength="10" minlength="3">
+                        </div>
                     </fieldset>
                     <fieldset class="contact-details">
-                        <label for="mail">EMAIL</label>
-                        <input type="email" name="mail" id="mail">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="number" name="phone" id="phone">
+                        <div class="row">
+                            <label for="mail">EMAIL</label>
+                            <input type="email" name="mail" id="mail" required>
+                        </div>
+                        <div class="row">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="number" name="phone" pattern="[7-9]{1}[0-9]{9}" max="9999999999" id="phone" required>
+                        </div>
                     </fieldset>
                     <fieldset class="password-details">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
-                        <label for="repassword">CONFIRM PASSWORD</label>
-                        <input type="password" name="repassword" id="repassword">
+                        <div class="row">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" required onkeyup="checkPassword()">
+                        </div>
+                        <div class="row">
+                            <label for="repassword">CONFIRM PASSWORD</label>
+                            <input type="password" name="repassword" id="repassword" required onkeyup="checkPassword()">
+                        </div>
                     </fieldset>
-                    <div>
+                    <article>
                         <button type="submit">Create Account</button>
                         <h4>Already hance an account? <span><a href="#">Log In</a></span></h4>
-                    </div>
+                    </article>
                 </form>
             </div>
         </section>
     </main>
-    
+    <footer>
+        <a href=""><img src="./images/github-logo.png" alt="github"></a>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
