@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+}
+img{
+    height: 100vh;
+    width: auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+fieldset{
+    border: 0;
+}
